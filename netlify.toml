@@ -13,14 +13,13 @@
 ## COMMENT: This rule redirects to an external api
 [[redirects]]
   from = "/api/inventory/load"
-  to = "https://epl01mnma4.execute-api.us-east-1.amazonaws.com/test/load"
+  to = "https://inventory-test.escsportsapi.com/load"
   status = 200
   force = true # COMMENT: ensure that we always redirect
   [redirects.headers]
     Content-Type = "application/json"
 		ESC-API-Key = "E_API_KEY_PLACEHOLDER"
-    ESC-API-Context = "E_API_CONTEXT_PLACEHOLDER"
-		X-API-Key = "AMAZON_API_KEY_PLACEHOLDER"
+		ESC-API-Context = "E_API_CONTEXT_PLACEHOLDER"
 
 [[redirects]]
   from = "/api/coupon/calculate"
