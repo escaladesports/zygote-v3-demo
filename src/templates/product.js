@@ -43,10 +43,6 @@ export default class ProductTemplate extends React.Component{
 						html,
 						excerpt,
 					},
-					salsifyContent: {
-						itemName,
-						webImages,
-					},
 					escaladePricing: {
 						price,
 					},
@@ -60,6 +56,8 @@ export default class ProductTemplate extends React.Component{
 				id,
 			},
 		} = this
+
+		const { itemName, webImages } = this.props.data.salsifyContent || {}
 
 		const hasImages = webImages && !!webImages.length
 		const imageRatio = [16, 9]

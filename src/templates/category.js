@@ -49,7 +49,7 @@ export default class ProductCategoryTemplate extends React.Component{
 				{products.map(({ id, title, path }, index) => (
 					<div key={`product${index}`}>
 						<Link to={path}>
-							<h2>{salsify[id].itemName || title}</h2>
+							<h2>{salsify[id] ? salsify[id].itemName : title}</h2>
 						</Link>
 					</div>
 				))}
