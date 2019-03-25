@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import Link from 'gatsby-link'
 import { css } from '@emotion/core'
-import Close from '@material-ui/icons/Close'
+// import Close from '@material-ui/icons/Close'
 import { primaryColor } from '../styles/colors'
 
 export default class Header extends React.Component{
@@ -16,7 +16,7 @@ export default class Header extends React.Component{
 		this.setState({ open: !this.state.open })
 	}
 	render(){
-		const { open } = this.state
+		// const { open } = this.state
 		return (
 			<header css={styles.header}>
 				<button
@@ -26,7 +26,7 @@ export default class Header extends React.Component{
 				>
 					menu
 				</button>
-				<nav
+				{/* <nav
 					css={[
 						styles.nav,
 						open && styles.navOpen,
@@ -43,7 +43,7 @@ export default class Header extends React.Component{
 						<li><Link to='/search'>Search</Link></li>
 						<li><Link to='/contact'>Contact</Link></li>
 					</ul>
-				</nav>
+				</nav> */}
 				{this.state.open && (
 					<style>{`body{overflow:hidden}`}</style>
 				)}

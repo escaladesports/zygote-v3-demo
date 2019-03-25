@@ -39,7 +39,9 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0"
+    "@babel/runtime": "^7.0.0",
+    "@escaladesports/zygote-cart": "^3.0.0",
+    "@escaladesports/zygote-plugin-esca-api": "^1.0.1"
   },
   "main": "dist/index.js",
   "devDependencies": {
@@ -160,6 +162,7 @@
     "statable": "^0.3.2",
     "static-server": "^2.2.1",
     "strip-html-comments": "^1.0.0",
+    "stripe": "^6.28.0",
     "striptags": "^3.1.1",
     "toml": "^2.3.3",
     "ultimate-pagination": "^1.0.0",

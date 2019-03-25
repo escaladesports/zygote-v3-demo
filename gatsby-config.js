@@ -5,10 +5,10 @@ const { readFileSync } = require(`fs-extra`)
 const globby = require(`globby`).sync
 const matter = require(`gray-matter`)
 const { siteUrl, siteId } = require(`./site-config`)
-const {
-	SALSIFY_API_KEY,
-	SALSIFY_ORG,
-} = require(`./env`)
+// const {
+// 	SALSIFY_API_KEY,
+// 	SALSIFY_ORG,
+// } = require(`./env`)
 
 
 // Get site info from markdown

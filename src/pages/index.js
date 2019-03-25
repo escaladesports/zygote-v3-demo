@@ -1,10 +1,7 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import Img from '../components/netlify-image'
-import Button from '../components/button'
+import { Cart, openCart, addToCart } from '@escaladesports/zygote-cart'
+
 import Layout from '../components/layouts/default'
-import Modal from '../components/modal'
-import Carousel from '../components/carousel'
 
 export default class HomePage extends React.Component {
 	constructor(props){
@@ -14,65 +11,27 @@ export default class HomePage extends React.Component {
 		}
 	}
 	render() {
-		const {
-			page: {
-				html,
-				frontmatter: {
-					headerImage,
-					headerImageDesc,
-				},
-			},
-		} = this.props.data
-
 		return (
 			<Layout>
-				<div dangerouslySetInnerHTML={{ __html: html }} />
+				<div>
+					<button onClick={() => addToCart({
+						id: `TESTA`,
+						name: `7.5' Covington Billiard Table`,
+						image: `https://images.salsify.com/image/upload/s--5scl3VX0--/w_75,h_75,c_pad/g8gkpmmhuhqzrqxu6boh.jpg`,
+						description: `Beautiful and refined, the 8' Minnesota Fats Covington Pool Table with Dur-A-Bond play bed will make a stunning centerpiece for your game room. Carved...`,
+						price: 999,
+						shippable: true,
+						stock: 999999,
+					})}>7.5' Covington Billiard Table</button>
+				</div>
 
-				<Carousel ratio={[1000, 400]}>
-					<img src='https://placehold.it/1000x400/ccc/999/&text=slide1' alt='Slide 1' />
-					<img src='https://placehold.it/1000x400/ccc/999/&text=slide2' alt='Slide 2' />
-					<img src='https://placehold.it/1000x400/ccc/999/&text=slide3' alt='Slide 3' />
-				</Carousel>
-
-				<br />
-
-				<Img
-					src={headerImage}
-					width={404}
-					height={405}
-					alt={headerImageDesc}
+				<button onClick={openCart}>Open Cart</button>
+				<Cart
+					stripeApiKey='pk_test_0EMVTB6nEzmrjGA0Fc0kyVOR'
+					infoWebhook='/.netlify/functions/info-stripe.js'
+					orderWebhook='/.netlify/functions/order-stripe.js'
 				/>
-
-				<br />
-
-				<Button
-					onClick={() => this.setState({ open: true })}
-				>
-					Open Modal
-				</Button>
-
-
-				<Modal
-					open={this.state.open}
-					onClose={() => this.setState({ open: false })}
-				>
-					<div>Modal content</div>
-				</Modal>
 			</Layout>
 		)
 	}
 }
-
-export const query = graphql`
-	query HomePage {
-		page: markdownRemark(fileAbsolutePath: {
-			regex: "/src/markdown/index.md/"
-		}){
-			html
-			frontmatter{
-				headerImage
-				headerImageDesc
-			}
-		}
-	}
-`
