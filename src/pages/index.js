@@ -28,8 +28,8 @@ export default class HomePage extends React.Component {
 				<button onClick={openCart}>Open Cart</button>
 				<Cart
 					stripeApiKey='pk_test_0EMVTB6nEzmrjGA0Fc0kyVOR'
-					infoWebhook='/.netlify/functions/info-stripe.js'
-					orderWebhook='/.netlify/functions/order-stripe.js'
+					infoWebhook='/.netlify/functions/info-stripe'
+					orderWebhook='/.netlify/functions/order-stripe'
 				/>
 			</Layout>
 		)
