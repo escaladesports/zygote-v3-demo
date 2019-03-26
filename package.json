@@ -41,7 +41,7 @@
   "dependencies": {
     "@babel/runtime": "^7.0.0",
     "@escaladesports/zygote-cart": "^3.0.2",
-    "@escaladesports/zygote-plugin-esca-api": "^1.0.2"
+    "@escaladesports/zygote-plugin-esca-api": "^1.0.3"
   },
   "main": "dist/index.js",
   "devDependencies": {
