@@ -33,6 +33,7 @@ export default class HomePage extends React.Component {
 					cartFooter={<div>* Free shipping, except Alaska and Hawaii</div>}
 
 					infoWebhook='/api/inventory/load'
+					splitName={true}
 					plugins={[
 						standardPayment,
 						escaApi,
