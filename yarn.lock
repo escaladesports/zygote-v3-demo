@@ -1193,9 +1193,9 @@
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
 "@escaladesports/zygote-cart@^3.0.2":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@escaladesports/zygote-cart/-/zygote-cart-3.0.4.tgz#31812b92d10420ea77d0b505b2a28a84f01d7fa4"
-  integrity sha512-NXGITU/fJNu7vZNw88ozkBiboEB4eaqDJieRM1hCw7x+8k9PWAqiun/SNuH8Akci1pD/05XMjK+pmlIWKwhkDQ==
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@escaladesports/zygote-cart/-/zygote-cart-3.0.5.tgz#998371ae24b89d599c09d79c76a22d96d13eb3ac"
+  integrity sha512-PtrfyH67o1zFVEZdtwahQU7aO2C9nsdXSM2GwSnU6raODkgaYubth34OwAquSCeqC/7mZI9V+ivUATQs9uM/Ew==
   dependencies:
     auth0-js "^9.8.2"
     auth0-lock "^11.12.1"
